@@ -1,6 +1,6 @@
 # Reconstruction-of-Satellite-Images
 
-Good Evening Sir, I am Vaishali Chauhan both are trying to explain the working of our project through github medium.
+Good Evening Sir, I and Vaishali Chauhan both are trying to explain the working of our project through github medium.
 
 ## Whenever user opens the application below is the interface which would be the first preview for a person
 
