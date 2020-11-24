@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Reconstruction</title>
+	<link href="{{url_for('static', filename='styles/style.css') }}" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<style>
+		h1{
+			color:orange;
+			font-family: Arial;
+			font-weight: bold;
+			font-size: 350%;
+		}
+
+		h3{
+			font-family: Arial;
+			font-weight: normal;
+			color: white;
+			font-weight: bold;
+			font-size: 230%;
+		}
+
+		h2{
+			font-size: 230%;
+			font-weight: bold;
+			font-family: Arial;
+			color: orange;
+		}
+		p{
+			color: white;
+			font-size: 100%;
+			font-weight: bold;
+		}
+
+	</style>
+
+</head>
+<body>
+	<!--for the background to be the globe-->
+	<center>
+		<h1>Satellite Image Reconstruction</h1>
+		<!-- <h3>Predict the hidden Area among Clouds</h3> -->
+	</br></br>
+
+		<marquee width="60%" direction="left" height="80">
+			<h2>How To Download the Processed Image again</h2>
+		</marquee>
+		<p>To Download the processed Image type the following URL in the New Tab:</p>
+		<p>&ltMain Address&gt/downloaded_file/&ltyour filename&gt.jpg</p>
+		<p>For Eg: http://0.0.0.0:8080/downloaded_file/xyz.jpg</p>
+		</br></br>
+		<marquee width="60%" direction="left" height="80">
+			<h2>How To see the current state of the uploaded Image</h2>
+		</marquee>
+		<p>To see the current patch of the image which is being processed type the following URL in the New Tab:</p>
+		<p>&ltMain Address&gt/Gif/&ltyour filename&gt.gif</p>
+		<p>For Eg: http://0.0.0.0:8080/Gif/xyz.gif</p>
+		
+
+	<!-- </center>
+	<a href="/downloaded_file/t1.jpg">Click</a> -->
+	<!-- <marquee width="60%" direction="left" height="100px">
+		
+	</marquee>	 -->
+</body>
+</html>

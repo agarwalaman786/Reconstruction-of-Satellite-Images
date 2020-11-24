@@ -1,0 +1,11 @@
+Flask==1.1.2
+tensorflow==1.0.1
+opencv-python
+numpy==1.16.4
+keras==2.2.0
+pillow==7.1.1
+matplotlib==3.0.3
+werkzeug==1.0.1
+theano==0.9.0
+boto3==1.13.16
+scikit-image

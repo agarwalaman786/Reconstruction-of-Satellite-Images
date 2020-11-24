@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pu-techfire-deployment
+  labels:
+    app: pu-techfire
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pu-techfire
+  template:
+    metadata:
+      labels:
+        app: pu-techfire
+    spec:
+      containers:
+      - name: pu-techfire
+        image: agarwalaman860/pu-techfire-project:latest #update with your dockerhub image
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: prediction-port
+spec:
+  selector:
+    app: pu-techfire
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 8080
+      nodePort: 30179
+

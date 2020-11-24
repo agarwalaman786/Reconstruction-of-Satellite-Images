@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Reconstruction</title>
+	<link href="{{url_for('static', filename='styles/style.css') }}" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<style>
+		h1{
+			color:orange;
+			font-family: Arial;
+			font-weight: bold;
+			font-size: 350%;
+		}
+		h3{
+			font-family: Arial;
+			font-weight: normal;
+			color: white;
+			font-weight: bold;
+			font-size: 230%;
+		}
+		#choose_file{
+			margin-top:2%; 
+			margin-left:13%; 
+		}
+		#submit{
+			margin-top:0%;
+		}
+		#submit:active{
+			box-shadow: 0 3px #666;
+			transform: translateY(4px);
+		}
+	
+		.pulse{
+			z-index: -1;
+		}
+		button a{
+			color: black;
+			text-decoration: none;
+		}
+		button{
+			margin-top: 19%;
+		}
+
+		h2{
+			font-size: 20px;
+			font-weight: bold;
+			font-family: Arial;
+			color: orange;
+			margin-top: 17%;
+		}
+		p{
+			color: white;
+			font-size: 12px;
+			font-weight: bold;
+		}
+
+		#Instructions{
+			font-family: Arial;
+			font-weight: normal;
+			color: white;
+			margin-top: 20%;
+			font-weight: bold;
+			font-size: 150%;
+		}
+
+		#Instruct_link{
+			color: orange;
+		}
+
+	</style>
+
+
+	<!-- Javascript for the page -->
+	
+	 <script type="text/javascript">
+		$(document).ready(
+		    function(){
+		        $('input:file').change(
+		            function(){
+		                if ($(this).val()) {
+		                    $('input:submit').attr('disabled',false);
+		                } 
+		        });
+		    });
+
+	</script>  
+
+
+</head>
+<body>
+	<!--for the background to be the globe-->
+	<div class="pulse">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+ 
+	<center>
+		<h1>Satellite Image Reconstruction</h1>
+		<h3>Predict the hidden Area among Clouds</h3>
+
+		<form action='/success' method = "post" enctype="multipart/form-data">  
+			<input id='choose_file' type="file" name="file" /> <br>
+			<input id='submit' type = "submit" value="Start Processing" style = "margin-top:-1%;,cursor: pointer;border-radius: 14%;padding: 4px 4px 4px 4px; box-shadow: 0 3px #999;border-radius: 15px;outline: none;" disabled>  
+		</form>	
+		<h3 id = "Instructions">
+			<a id = "Instruct_link" href="/Instructions" target="_blank">
+				Click Here 
+		    </a>to read the Instructions before Start Processing
+		</h3>
+	</center>
+	
+	<!-- <marquee width="60%" direction="left" height="100px">
+		
+	</marquee>	 -->
+</body>
+</html>

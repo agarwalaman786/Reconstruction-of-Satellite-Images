@@ -1,0 +1,7 @@
+{
+    "endpoint_url":"https://s3.us-east.objectstorage.softlayer.net",
+    "aws_access_key_id":"a5b05ded933e4f40b4b530448fa9fd72",
+    "aws_secret_access_key":"6cf32a1082e539d8ceb4db3d3ff7448e1557e3a36a1bf0dc",
+    "bucketName":"storage-bucket-pu-techfire"
+}
+
